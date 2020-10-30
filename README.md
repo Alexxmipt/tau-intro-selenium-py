@@ -405,7 +405,7 @@ def test_basic_duckduckgo_search(browser):
   search_page.search(PHRASE)
 
   # Then the search result title contains "panda"
-  assert PHRASE in result_page.title()
+  assert PHRASE in result_page.title
   
   # And the search result query is "panda"
   assert PHRASE == result_page.search_input_value()
@@ -804,7 +804,7 @@ def test_basic_duckduckgo_search(browser):
   search_page.search(PHRASE)
 
   # Then the search result title contains "panda"
-  assert PHRASE in result_page.title()
+  assert PHRASE in result_page.title
   
   # And the search result query is "panda"
   assert PHRASE == result_page.search_input_value()
@@ -1014,7 +1014,7 @@ def test_basic_duckduckgo_search(browser):
 
   # And the search result title contains "panda"
   # (Putting this assertion last guarantees that the page title will be ready)
-  assert PHRASE in result_page.title()
+  assert PHRASE in result_page.title
 ```
 
 Rerun the test using `pipenv run python -m pytest` with Firefox to verify the fix.
@@ -1066,7 +1066,7 @@ def test_basic_duckduckgo_search(browser, phrase):
 
   # And the search result title contains the phrase
   # (Putting this assertion last guarantees that the page title will be ready)
-  assert phrase in result_page.title()
+  assert phrase in result_page.title
 ```
 
 The test will now run three times with different search phrases.
