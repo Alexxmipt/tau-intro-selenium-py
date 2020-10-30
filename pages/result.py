@@ -29,7 +29,5 @@ class DuckDuckGoResultPage:
         value = search_input.get_attribute('value')
         return value
 
-    @property
     def title(self):
-        assert isinstance(self.browser.title, object)
         return self.browser.title
